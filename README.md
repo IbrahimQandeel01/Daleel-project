@@ -29,9 +29,6 @@ Daleel is an advanced AI chatbot designed to provide accurate and context-aware 
 * **Frontend**: HTML, CSS, JavaScript (No React used)
 * **Database**: Not utilized in this project
 * **APIs**: RESTful APIs
-* **Search & Retrieval**: Elasticsearch
-* **Containerization**: Docker (compose.yaml for orchestration)
-* **Version Control**: Git
 
 ---
 
@@ -73,26 +70,6 @@ Daleel-project/
 
    Navigate to the `Daleel-front-end-main` directory and follow the frontend setup instructions provided there.
 
-4. **Docker Compose**:
-
-   To run the application with Docker:
-
-   ```bash
-   docker-compose -f compose.yaml up
-   ```
-
----
-
-## 🧪 Running Tests
-
-To execute tests:
-
-```bash
-./mvnw test
-```
-
----
-
 ## 📄 Documentation
 
 For an in-depth overview of the project, including architecture and design decisions, refer to the [project presentation](https://www.canva.com/design/DAG0D-iqNI4/jxh9wwON4DsO1XXQaJ-6hg/edit?ui=e30).
@@ -112,3 +89,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Feel free to adjust any sections as per your project's specific requirements or additional features.
+

@@ -1,0 +1,33 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.5)
+
+2025-09-18T15:04:19.278+03:00  INFO 13440 --- [rag-demo-project] [           main] c.i.r.RagDemoProjectApplication          : Starting RagDemoProjectApplication using Java 23.0.2 with PID 13440 (C:\Users\Ibrahim\Desktop\google-hackathon\rag-demo-project\target\classes started by Ibrahim in C:\Users\Ibrahim\Desktop\google-hackathon\rag-demo-project)
+2025-09-18T15:04:19.284+03:00  INFO 13440 --- [rag-demo-project] [           main] c.i.r.RagDemoProjectApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-09-18T15:04:21.539+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'vectorStore' with a different definition: replacing [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=appConfig; factoryMethodName=vectorStore; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [com/ibrahim/rag_demo_project/AppConfig.class]] with [Root bean: class=null; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; fallback=false; factoryBeanName=org.springframework.ai.vectorstore.pgvector.autoconfigure.PgVectorStoreAutoConfiguration; factoryMethodName=vectorStore; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [org/springframework/ai/vectorstore/pgvector/autoconfigure/PgVectorStoreAutoConfiguration.class]]
+2025-09-18T15:04:23.039+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-09-18T15:04:23.100+03:00  INFO 13440 --- [rag-demo-project] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-18T15:04:23.102+03:00  INFO 13440 --- [rag-demo-project] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-18T15:04:23.340+03:00  INFO 13440 --- [rag-demo-project] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-18T15:04:23.344+03:00  INFO 13440 --- [rag-demo-project] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3882 ms
+2025-09-18T15:04:25.460+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.a.v.pgvector.PgVectorStore           : Using the vector table name: vector_store. Is empty: false
+2025-09-18T15:04:25.467+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.a.v.pgvector.PgVectorStore           : Initializing PGVectorStore schema for table: vector_store in schema: public
+2025-09-18T15:04:25.467+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.a.v.pgvector.PgVectorStore           : vectorTableValidationsEnabled false
+2025-09-18T15:04:30.573+03:00  INFO 13440 --- [rag-demo-project] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-18T15:04:30.964+03:00  INFO 13440 --- [rag-demo-project] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e1c3cef
+2025-09-18T15:04:30.972+03:00  INFO 13440 --- [rag-demo-project] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-18T15:04:32.505+03:00  INFO 13440 --- [rag-demo-project] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/'
+2025-09-18T15:04:32.529+03:00  INFO 13440 --- [rag-demo-project] [           main] c.i.r.RagDemoProjectApplication          : Started RagDemoProjectApplication in 14.698 seconds (process running for 16.017)
+2025-09-18T15:04:42.914+03:00  INFO 13440 --- [rag-demo-project] [nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-18T15:04:42.914+03:00  INFO 13440 --- [rag-demo-project] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-18T15:04:42.918+03:00  INFO 13440 --- [rag-demo-project] [nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-09-18T15:17:27.184+03:00  INFO 13440 --- [rag-demo-project] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-18T15:17:27.355+03:00  INFO 13440 --- [rag-demo-project] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-18T15:17:27.420+03:00  INFO 13440 --- [rag-demo-project] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-18T15:17:27.510+03:00  INFO 13440 --- [rag-demo-project] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

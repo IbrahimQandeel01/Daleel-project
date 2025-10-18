@@ -1,0 +1,224 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="دليل - المساعد القانوني الذكي للقوانين الأردنية">
+  <meta name="keywords" content="قانون, الأردن, مساعد قانوني, ذكي, استشارة">
+  <meta name="author" content="Java Cup Team">
+  <title>تسجيل الدخول - دليل</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2310a37f'/><text x='50' y='55' font-size='50' text-anchor='middle' fill='white'>⚖️</text></svg>">
+  
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0e17 0%, #131b2d 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .login-container {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    
+    .login-card {
+      background: rgba(19, 27, 45, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .login-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    
+    .login-header p {
+      color: var(--text-secondary);
+      margin: 0;
+    }
+    
+    .form-footer {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+    
+    .form-footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 1.5rem 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-color);
+      margin: 0 1rem;
+    }
+    
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .remember-me input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      accent-color: var(--accent-color);
+    }
+    
+    .forgot-password {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-card glass">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to continue to AI Assistant</p>
+      </div>
+      
+      <form id="loginForm">
+        <div class="input-group">
+          <i class='bx bx-envelope input-icon'></i>
+          <input type="email" id="email" class="input-field" placeholder="Email address" required>
+        </div>
+        
+        <div class="input-group">
+          <i class='bx bx-lock-alt input-icon'></i>
+          <input type="password" id="password" class="input-field" placeholder="Password" required>
+        </div>
+        
+        <div class="remember-forgot">
+          <label class="remember-me">
+            <input type="checkbox" id="remember">
+            Remember me
+          </label>
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Sign In
+        </button>
+        
+        <div class="divider">OR</div>
+        
+        <button type="button" class="btn btn-secondary" style="width: 100%; margin-bottom: 1.5rem;">
+          <i class='bx bxl-google' style="margin-right: 8px;"></i> Continue with Google
+        </button>
+        
+        <div class="form-footer">
+          Don't have an account? <a href="#" id="registerLink">Sign up</a>
+        </div>
+      </form>
+    </div>
+    
+    <div class="form-footer" style="margin-top: 1.5rem; text-align: center;">
+      &copy; 2025 AI Assistant. All rights reserved.
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const remember = document.getElementById('remember').checked;
+      
+      // Here you would typically validate credentials with a server
+      // For demo purposes, we'll redirect after a short delay to simulate API call
+      document.querySelector('.btn-primary').textContent = 'Signing in...';
+      document.querySelector('.btn-primary').disabled = true;
+      
+      // Simulate API call delay
+      setTimeout(() => {
+        // Store login state in localStorage if remember me is checked
+        if (remember) {
+          localStorage.setItem('isLoggedIn', 'true');
+          localStorage.setItem('userEmail', email);
+        } else {
+          sessionStorage.setItem('isLoggedIn', 'true');
+        }
+        
+        // Redirect to AI chat
+        window.location.href = 'ai.html';
+      }, 1000);
+    });
+    
+    document.getElementById('registerLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      // For now, redirect to login page with a signup flag
+      // In a real app, you would show a registration form
+      window.location.href = 'index.html?signup=true';
+    });
+    
+    // Check for signup flag in URL
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('signup') === 'true') {
+        // Show signup message or form
+        const loginHeader = document.querySelector('.login-header h1');
+        if (loginHeader) {
+          loginHeader.textContent = 'Create an Account';
+          document.querySelector('.login-header p').textContent = 'Join our AI Assistant community today';
+          document.querySelector('.btn-primary').textContent = 'Sign Up';
+          document.querySelector('.form-footer').innerHTML = 'Already have an account? <a href="index.html">Sign in</a>';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
